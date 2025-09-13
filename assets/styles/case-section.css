@@ -1,0 +1,173 @@
+@font-face {
+    font-family: 'mont-bold';
+    src: url(../fonts/Montserrat-Bold.ttf);
+  }
+#case-section {
+    gap: 40px;
+    margin-top: 80px;
+}
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 60px 0;
+    align-items: center;
+}
+.case-card {
+    background: rgba(36, 51, 94, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.case-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+.case-card h1 {
+    cursor: pointer;
+    font-family: 'mont-bold';
+    font-size: 2rem;
+    opacity: 1;
+    padding: 10px;
+    border: 1px solid #45b7d1;
+}
+.case-card h1:hover {
+    transition: all 0.3s ease;
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+.case-img img {
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+    object-fit: cover;
+    opacity: 0.8;
+}
+.case-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 7px;
+    background: linear-gradient(90deg, #1dffbb, #4ecdc4, #45b7d1);
+}
+.case-number {
+    font-family: 'mont-bold';
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #56dad1;
+    margin-bottom: 10px;
+}
+
+.reason-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.reason-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    line-height: 1.7rem;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0; 
+    transform: translateY(-5px);
+    transition: opacity 1.5s ease, transform 0.5s ease;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.reason-item.show{
+    padding: 10px;
+    max-height: 100%;
+    opacity: 1;
+    transform: translateY(0);
+}
+.reason-item.show:hover {
+    transform: translateX(5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.reason-icon {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.visual { background: #ff6b6b; }
+
+.reason-text {
+    font-family: 'mont-bold';
+    font-size: 1.1rem;
+    color: #ff6b6b;
+}
+
+@media (max-width: 992px) {
+  .card-container {
+    grid-template-columns: 1fr; /* stack cards in one column */
+    gap: 30px;
+    margin: 40px 0;
+  }
+
+  .case-card h1 {
+    font-size: 1.7rem;
+  }
+
+  .case-number {
+    font-size: 2.5rem;
+  }
+
+  .case-label {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #case-section {
+    margin-top: 50px;
+    gap: 20px;
+  }
+
+  .card-container {
+    gap: 20px;
+    margin: 30px 0;
+  }
+
+  .case-card {
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .case-card h1 {
+    font-size: 1.4rem;
+    padding: 8px;
+  }
+
+  .case-number {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+
+  .case-label {
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+
+  .reason-item.show {
+    padding: 8px;
+  }
+
+  .reason-text {
+    font-size: 1rem;
+  }
+}

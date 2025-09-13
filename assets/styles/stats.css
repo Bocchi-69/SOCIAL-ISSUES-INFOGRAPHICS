@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'mont-bold';
+    src: url(../fonts/Montserrat-Bold.ttf);
+  }
+#statSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 60px 0;
+    align-items: center;
+}
+
+.stat-card {
+    background: rgba(36, 51, 94, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 7px;
+    background: linear-gradient(90deg, #1dffbb, #4ecdc4, #45b7d1);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.stat-number {
+    font-family: 'mont-bold';
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #56dad1;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+.disability-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.breakdown-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.breakdown-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(5px);
+}
+
+.breakdown-icon {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.breakdown-icon.visual {
+  background: #4ecdc4;
+}
+.hearing { 
+  background: #ff6b6b; 
+}
+.intellectual { 
+  background: #3ad4f7; 
+}
+.others { 
+  background: #3af7b5;
+}
+
+.breakdown-text {
+    font-size: 1.1rem;
+}
+
+.breakdown-percent {
+    margin-left: auto;
+    font-weight: bold;
+    color: #4ecdc4;
+}
+.chart {
+    display: flex;
+    place-content:center; 
+    flex-flow: wrap;
+    gap: 2rem;
+}
+.pie{
+    flex: 1 0 225px;
+    max-width: 325px;
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 50%;
+    background-image:
+       radial-gradient(
+            #24335e   0 35%,   /* Inner hole*/
+            transparent 35% 70%, /* Donut ring*/
+            transparent 70% 100% /* Outer */
+        ),
+        conic-gradient( 
+            from 90deg at 50% 50%,
+            #2cfeb4 0% 35%,
+            #3ad4f7 35% 45%,
+            #ff6b6b 45% 55%,
+            #4ecdc4 55% 100%
+        );
+}
+
+@media (max-width: 768px) {
+  #statSection {
+    grid-template-columns: 1fr; /* stack vertically */
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+  }
+
+  .breakdown-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stat-card {
+    padding: 15px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+  }
+
+  .breakdown-text {
+    font-size: 0.9rem;
+  }
+
+  .breakdown-item {
+    gap: 10px;
+    padding: 10px;
+  }
+}

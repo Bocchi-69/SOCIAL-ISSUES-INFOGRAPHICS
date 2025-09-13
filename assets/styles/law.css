@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'mont-bold';
+    src: url(../fonts/Montserrat-Bold.ttf);
+  }
+#lawSection {
+    font-family: 'mont-bold';
+    background: linear-gradient(135deg, rgba(76, 205, 196, 0.18), rgba(69, 183, 209, 0.18), rgba(107, 255, 213, 0.18));
+    padding: 40px;
+    border-radius: 25px;
+    margin: 40px 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    cursor: pointer;
+    transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+}
+#lawSection:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 32px rgba(36, 51, 94, 0.18);
+    background: linear-gradient(135deg, rgba(76, 205, 196, 0.25), rgba(69, 183, 209, 0.25));
+}
+.law-icon {
+    font-size: 10rem;
+    opacity: 0.8;
+}
+.law-icon.active{
+    animation: fadeOutIn 1.5s ease-in-out forwards;
+}
+.content-container {
+    transition: all 0.5s linear;
+    cursor: pointer;
+}
+
+.content-container.active {
+    transform: translateY(-15px);
+}
+.content-container h1{
+    font-family: 'mont-bold';
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #9ffdf7;
+    opacity: 1;
+    margin-bottom: 25px;
+}    
+.content-container.active h1 {
+    animation: fadeOutIn 1.5s ease-in-out forwards;
+}
+@keyframes fadeOutIn {
+    0% { opacity: 1; }
+    10% { opacity: 0; }
+    20% { opacity: 0; }
+    30% { opacity: 0; }
+    40% { opacity: 0; }
+    50% { opacity: 0; }
+    60% { opacity: 0; }
+    70% { opacity: 0; }
+    80% { opacity: 0; }
+    90% { opacity: 0.2; }
+    95% { opacity: 0.5; }
+    97% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+.law-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: all 1s ease-in-out;
+}
+.law-content ul{
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+.law-content.show {
+    max-height: 300px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.law-content h3 {
+    font-family: 'mont-bold';
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #4ecdc4;
+}
+.law-content:nth-child(2) {
+    transition-delay: 0.25s;
+}
+.law-content:nth-child(3) {
+    transition-delay: 0.5s;
+}
+
+.law-content:nth-child(4) {
+    transition-delay: 0.75s;
+}
+
+@media (max-width: 1024px) {
+  .law-icon {
+    font-size: 7rem;
+  }
+
+  .content-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .law-content h3 {
+    font-size: 1.6rem;
+  }
+
+  .law-content p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #lawSection {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 25px;
+  }
+
+  .law-icon {
+    font-size: 5rem;
+  }
+
+  .content-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .law-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .law-content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #lawSection {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .law-icon {
+    font-size: 3.5rem;
+  }
+
+  .content-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .law-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .law-content p {
+    font-size: 0.85rem;
+  }
+}

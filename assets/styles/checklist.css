@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'mont-bold';
+    src: url(../fonts/Montserrat-Bold.ttf);
+  }
+#checklistSection {
+    margin: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #4ecdc4;
+}
+
+.checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.checklist-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(123, 97, 255, 0.15), rgba(74, 144, 226, 0.15));
+    padding: 70px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.checklist-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, rgba(123, 97, 255, 0.25), rgba(74, 144, 226, 0.25));
+}
+
+.item-icon {
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.item-title {
+    font-family: 'mont-bold';
+    position: relative;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #3ad4f7;
+    z-index: 1;
+}
+
+.item-description {
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.5;
+    z-index: 1;
+     max-height: 0;
+    overflow: hidden;
+    opacity: 0; 
+    transform: translateY(-5px);
+    transition: opacity 1.5s ease, transform 0.5s ease;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.item-description.show{
+    padding: 10px;
+    max-height: 100%;
+    opacity: 1;
+    transform: translateY(0);
+}
+.item-image{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 10rem;
+    margin-bottom: 20px;
+    z-index: -1;
+    object-fit: cover;
+    opacity: 0.1;
+}

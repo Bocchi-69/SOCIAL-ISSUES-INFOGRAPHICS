@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'mont-bold';
+    src: url(../fonts/Montserrat-Bold.ttf);
+  }
+#whatif-section {
+    gap: 40px;
+    margin-top: 80px;
+}
+.whatif-quote{
+    font-size: 1.5rem;
+    font-family: 'mont-bold';
+    text-align: center;
+    color:#65e6dd
+}
+.whatif-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin: 60px 0;
+    align-items: center;
+}
+.whatif-card {
+    background: rgba(36, 51, 94, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.whatif-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+.whatif-card h1 {
+    cursor: pointer;
+    font-family: 'mont-bold';
+    font-size: 2rem;
+    opacity: 1;
+    padding: 10px;
+    border: 1px solid #254769;
+}
+.whatif-card h1:hover {
+    transition: all 0.3s ease;
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+.whatif-img img {
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.whatif-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 7px;
+    background: linear-gradient(90deg, #1dffbb, #4ecdc4, #45b7d1);
+}
+.whatif-number {
+    font-family: 'mont-bold';
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #56dad1;
+    margin-bottom: 10px;
+}
+
+.whatif-label {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+.whatif-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.whatif-item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0; 
+    transform: translateY(-5px);
+    transition: opacity 1.5s ease, transform 0.5s ease;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.whatif-item.show{
+    padding: 10px;
+    max-height: 100%;
+    opacity: 1;
+    transform: translateY(0);
+}
+.whatif-item.show:hover {
+    transform: translateX(5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.whatif-icon {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.visual { background: #ff6b6b; }
+
+.whatif-text {
+    display: flex;
+    font-family: 'mont-bold';
+    font-size: 1.1rem;
+    color: #ff6b6b;
+}
+.whatif p{
+    font-size: 1.2rem;
+}
+.whatif ul{
+    font-size: 1rem;
+    line-height: 2;
+    padding: 20px;
+}
+.whatif-text p{
+    font-size: 1.5rem;
+    line-height: 2;;
+}
+
+
+
+@media (max-width: 768px) {
+  .whatif-card h1 {
+    font-size: 1.6rem;
+  }
+  .whatif-number {
+    font-size: 2.5rem;
+  }
+  .whatif-label {
+    font-size: 1rem;
+  }
+  .whatif p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .whatif-card {
+    padding: 15px;
+  }
+  .whatif-card h1 {
+    font-size: 1.4rem;
+  }
+  .whatif-number {
+    font-size: 2rem;
+  }
+  .whatif-label {
+    font-size: 0.9rem;
+  }
+  .whatif p {
+    font-size: 0.9rem;
+  }
+}

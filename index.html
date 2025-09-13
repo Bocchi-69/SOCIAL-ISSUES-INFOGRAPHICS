@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designing for All - Digital Accessibility Guide</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <script src="https://kit.fontawesome.com/1acfdd8e0d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="floating-elements">
+    <div class="floating-element" style="left: 10%; font-size: 2re  m; animation-delay: 0s;">♿</div>
+    <div class="floating-element" style="left: 30%; font-size: 1.5rem; animation-delay: 5s;"><i class="fa-solid fa-eye"></i></div>
+    <div class="floating-element" style="left: 25%; font-size: 2rem; animation-delay: 10s;">👂</div>
+    <div class="floating-element" style="left: 70%; font-size: 1.5rem; animation-delay: 15s;">🧠</div>
+    <div class="floating-element" style="left: 50%; font-size: 2rem; animation-delay: 8s;">⚡</div>
+    <div class="floating-element" style="left: 60%; font-size: 1.5rem; animation-delay: 5s;">⚖️</div>
+    <div class="floating-element" style="left: 90%; font-size: 2rem; animation-delay: 10s;">🌐</div>
+    <div class="floating-element" style="left: 80%; font-size: 1.5rem; animation-delay: 15s;">🧩</div>
+</div>
+
+<div class="container">
+    <header class="header">
+        <h1>DESIGNING FOR ALL</h1>
+        <p>A DEVELOPER'S CHECKLIST FOR DIGITAL ACCESSIBILITY</p>
+    </header>
+
+    <section id="quoteSection">
+        <div class="quote">
+            Digital accessibility ensures that websites, mobile applications, and other digital technologies are usable by people with disabilities (PWDs).
+        </div>
+    </section>
+
+    <section id="statSection">
+        <div class="stat-card">
+            <div class="stat-number" id="counter">0</div>
+            <div class="stat-label">
+                Registered PWDs in The Philippines Face Digital Barriers
+            </div>
+            <figure class="chart">
+                <div class="pie"></div>
+            </figure>
+        </div>   
+        <div class="stat-card">
+            <div class="disability-breakdown">
+                <div class="breakdown-item">
+                    <div class="breakdown-icon visual"></div>
+                    <div class="breakdown-text">Visually Impaired</div>
+                    <div class="breakdown-percent">45%</div>
+                </div>
+                <div class="breakdown-item">
+                    <div class="breakdown-icon hearing"></div>
+                    <div class="breakdown-text">Hearing Impairment</div>
+                    <div class="breakdown-percent">10%</div>
+                </div>
+                <div class="breakdown-item">
+                    <div class="breakdown-icon intellectual"></div>
+                    <div class="breakdown-text">Intellectually Impaired</div>
+                    <div class="breakdown-percent">10%</div>
+                </div>
+                <div class="breakdown-item">
+                    <div class="breakdown-icon others"></div>
+                    <div class="breakdown-text">Others</div>
+                    <div class="breakdown-percent">35%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lawSection">
+        <div class="law-icon">⚖️</div>
+        <div class="content-container">
+            <h1>Accessibility Rights For PWDS</h1>
+            <div class="law-content">
+            <h3>Republic Act No. 7277 (Magna Carta for PWDs)</h3>
+            <ul>
+                <li>Promotes the rights and welfare of PWDs, ensuring they enjoy the same opportunities as others.</li>
+                <li>Requires removal of barriers and provision of access facilities in public spaces, transportation, and digital communication.</li>
+                <li>Covers areas like employment, education, health, accessibility, telecommunications, and social services.</li>
+            </ul>
+            </div>
+            <div class="law-content">
+            <h3>Republic Act No. 11106 (Filipino Sign Language  Act)</h3>
+            <ul>
+                <li>Ensures equal access to information by requiring Filipino Sign Language (FSL) in broadcast media and online content</li>
+                <li>Requires the use of FSL in media, online platforms, education, and government services to ensure equal access to information and participation in society.</li>
+                <li>Promotes inclusive communication and digital accessibility by mandating training, materials, and programs that integrate FSL in both physical and digital spaces.</li>
+            </ul>
+            </div>
+             <div class="law-content">
+            <h3>DICT Memorandum Circular (MC) No. 004</h3>
+            <ul>
+                <li>Adopted the W3C Web Content Accessibility Guidelines (WCAG) 2.0 as the national standard for web content.</li>
+                <li>Make government websites and online services accessible to a wider range of people with disabilities.</li>
+                <li>All national government agencies were required to comply.</li>
+            </ul>
+            </div>
+        </div>  
+    </section>
+
+    <section id="progressSection">
+        <h2 class="section-title">Current Accessibility Compliance</h2>
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <div class="progress-text">Average Compliance Accessibility Rate For Government Websites (82%)</div>
+    </section>
+    
+    <section id="case-section">
+        <h2 class="section-title">Case Study</h2>
+        <div class="card-container">
+        <div class="case-card">
+            <div class="reason-breakdown">
+                <h1>Why PhilHealth?</h1>
+                <div class="reason-item">
+                    <div class="reason">
+                        <p>PhilHealth, as a vital healthcare provider, must ensure its website is accessible since any barriers could prevent PWDs from accessing benefits, information, and essential health services.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="reason-breakdown">
+                <h1>Accessibility Issues</h1>
+                <div class="reason-item">
+                    <div class="reason-text">Visual Disabilities (Blind/Low Vision)</div>
+                    <p>-Many images lack proper alt text, making it hard for screen readers to describe content.</p>
+                    <p>-Text contrast is sometimes low (e.g., gray text on white background), reducing readability for people with low vision.</p>
+                </div>
+                <div class="reason-item">
+                    <div class="reason-text">Motor Disabilities</div>
+                    <p>-Small clickable elements (tiny buttons, links close together) make it difficult for users with limited motor control to navigate.</p>
+                    <p>-No full keyboard navigation—some forms and menus require mouse input.</p>
+                </div> 
+                <div class="reason-item">
+                    <div class="reason-text">Cognitive Disabilities</div>
+                    <p>-Information-heavy text with no simplified “easy-to-read” option can overwhelm users with learning or cognitive difficulties.</p>
+                    <p>-Inconsistent layout and navigation can confuse users trying to find specific information.</p>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="case-card">
+            <div class="case-img">
+                <img src="./assets/images/philhealth-logo.avif" alt="philhealthlogo">
+            </div>
+        </div>
+        </div>
+    </section>
+   
+    <section id="whatif-section">
+        <div class="whatif-container">
+                <div class="whatif-quote quote">
+               "What if a group of visually impaired PWDs decided to file a class-action lawsuit against a prominent government agency, arguing that its newly launched public services portal is completely unusable with a screen reader?"
+                </div>
+        <div class="whatif-card">
+            <div class="whatif-breakdown">
+                <h1>Possible Action To Be Taken</h1>
+                <div class="whatif-item">
+                    <div class="whatif">
+                        <p>The group, with the support of National Council on Disability Affairs (NCDA), files a class-action lawsuit against the agency. Their legal claim is based on:</p>
+                        <ul>
+                            <li>Republic Act 7277 (Magna Carta for Persons with Disabilities), which guarantees accessibility and equal opportunity.</li>
+                            <li>Republic Act 11106 (Filipino Sign Language Act) and related digital accessibility policies, emphasizing inclusive communication.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="whatif-breakdown">
+                <h1>Possible Outcomes</h1>
+                <div class="whatif-item">
+                    <div class="whatif-text">Legal Victory for PWDs</div>
+                    <p>- Court mandates the agency to redesign the portal for accessibility (WCAG compliance).</p>
+                    <p>- Sets a precedent, pushing other agencies to review their digital platforms.</p>
+                    <p>- Strengthens advocacy for inclusive ICT policies.</p>
+                </div>
+                <div class="whatif-item">
+                    <div class="whatif-text">Settlement / Mediation</div>
+                    <p>- The agency avoids trial by committing to immediate accessibility fixes.</p>
+                    <p>- Partnership formed with PWD groups for continuous accessibility testing.</p>
+                </div> 
+            </div>
+        </div>
+        
+
+    </section>
+
+    <section id="checklistSection">
+        <h2 class="section-title">DEVELOPER'S CHECKLIST</h2>
+        <div class="checklist-grid">
+            <div class="checklist-item">
+                <div class="item-image"><i class="fa-solid fa-eye"></i></div>
+                <div class="item-title">SCREEN READER SUPPORT</div>
+                <div class="item-description">Ensure your content works seamlessly with assistive technologies for visually impaired users.</div>
+            </div>
+
+            <div class="checklist-item">
+                <div class="item-image"><i class="fa-solid fa-music"></i></div>
+                <div class="item-title">CAPTION VIDEOS</div>
+                <div class="item-description">Provide accurate captions and transcripts for all audio and video content.</div>
+            </div>
+
+            <div class="checklist-item">
+                <div class="item-image"><i class="fa-solid fa-font"></i></div>
+                <div class="item-title">RESIZABLE TEXT</div>
+                <div class="item-description">Allow text to be resized up to 200% without loss of functionality or content.</div>
+            </div>
+
+            <div class="checklist-item">
+                <div class="item-image"><i class="fa-solid fa-puzzle-piece"></i></div>
+                <div class="item-title">AVOID CAPTCHA PUZZLES</div>
+                <div class="item-description">Use simple, accessible verification methods instead of complex visual puzzles.</div>
+            </div>
+
+            <div class="checklist-item">
+                <div class="item-image"><i class="fa-solid fa-bolt"></i></i></div>
+                <div class="item-title">AVOID FLASHING CONTENT</div>
+                <div class="item-description">Prevent seizures by avoiding rapidly flashing or strobing visual content.</div>
+            </div>
+
+            <div class="checklist-item">
+                <div class="item-image"><i class="fa-solid fa-keyboard"></i></i></div>
+                <div class="item-title">KEYBOARD NAVIGATION</div>
+                <div class="item-description">Ensure all interactive elements are accessible via keyboard without a mouse.</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="finalSection">
+        <div class="final-icon"><i class="fa-solid fa-globe"></i></div>
+            <h2 class="final-title">Inclusive design = Responsible design.</h2>
+            <p>Every line of code is an opportunity to create a more accessible web for everyone.</p>
+    </section>
+</div>
+
+<script src="./assets/styles/animation.js"></script>
+</body>
+</html>
